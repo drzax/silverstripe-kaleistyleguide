@@ -1,0 +1,22 @@
+{
+    "name": "drzax/silverstripe-styleguide",
+    "description": "A fork of the Kalei Style Guide designed to work with SilverStripe themes",
+    "type": "silverstripe-module",
+	"license": "Unlicense",
+    "keywords": ["silverstripe", "style-guide"],
+	"homepage": "https://github.com/lrc/silverstripe-kaleistyleguide/",
+    "authors": [
+		{
+            "name": "Thomas Davis",
+            "email": "thomasalwyndavis@gmail.com"
+        },
+        {
+            "name": "Simon Elvery",
+            "email": "simon@elvery.net"
+        },
+        {
+            "name": "Left, Right & Centre",
+			"email": "hello@leftrightandcentre.com.au"
+        }
+    ]
+}
