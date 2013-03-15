@@ -84,6 +84,12 @@ define([
                   type: 'html',
                   text: '<div class="codedemo">' + comment.text + '<div style="clear: both;"></div></div>'
                 });
+                
+                // Remove 'fixie' class from example code
+                comment.text = comment.text.replace(/\s*fixie\s*/, '');
+                
+                // Remove empty class attributes that might result from removing the fixie class
+                comment.text = comment.text.replace(/\s*class=['"]{2}\s*/, '');
               }
               currentBlock.comments.push(comment);
             
