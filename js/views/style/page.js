@@ -54,8 +54,14 @@ define([
         _.each(stylesheet.cssRules, function(rule) {
           if(rule.type === 101) {
             var comment = rule.parsedCssText;
-            comment = comment.replace('/*', '');
+
+            // Check that it's a doc block
+            if(comment.substr(0,3) !== '/**') return;
+			
+            // Remove comment delimiters
+            comment = comment.replace('/**', '');
             comment = comment.replace('*/', '');
+            
             var comments = marked.lexer(comment);
             var defLinks = comments.links || {}; // lexer appends definition links to returned token object
             currentBlock.comments.links = defLinks;
