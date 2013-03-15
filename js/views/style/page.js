@@ -37,8 +37,8 @@ define([
         configDir = config.css_path.substr(0, config.css_path.lastIndexOf('/'));
         styleUrl = configDir + '/' + this.options.style;
       }
-      console.log('try', styleUrl);
-     require(['text!'+ styleUrl], function (stylesheet){
+      
+      require(['text!'+ styleUrl], function (stylesheet){
         var parser = new jscssp();
         marked.setOptions(markedOpts);
         stylesheet = parser.parse(stylesheet, false, true);
@@ -112,7 +112,7 @@ define([
         $(' code').each(function(i, e) {hljs.highlightBlock(e); });
 
         $('.kalei-comments-container > .kalei-comments > h2, .kalei-comments-container > .kalei-comments  > h1').waypoint(function(ev) {
-          console.log(arguments);
+
          $('.sheet-submenu li').removeClass('active');
            $('.sheet-submenu li:contains('+$(ev.currentTarget).text()+')').addClass('active');
         }, {

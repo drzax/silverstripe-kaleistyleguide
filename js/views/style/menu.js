@@ -12,7 +12,7 @@ define([
     render: function () {
       var that = this;
       that.$el.html('Loading styles');
-      console.log(config.css_path);
+      
       require(['text!' + config.css_path], function (styles) {
 
       var masterStyle = config.css_path.substr(config.css_path.lastIndexOf('/')+1);
@@ -31,6 +31,7 @@ define([
         };
 
         _.each(stylesheet.cssRules, function(rule) {
+          // It's a comment!
           if(rule.type === 101) {
             var comment = rule.parsedCssText;
             comment = comment.replace('/*', '');
@@ -54,6 +55,8 @@ define([
             });
 
           }
+          
+          // It's an imported stylesheet
           if(rule.type === 3) {
             var sheet = rule.href.substr(rule.href.indexOf('(')+2, rule.href.indexOf(')')-rule.href.indexOf('(')-3);
             currentMenu.sheets.push(sheet);
