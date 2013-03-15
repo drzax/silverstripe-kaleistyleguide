@@ -52,11 +52,6 @@ define([
               if(comment.type === 'heading' && comment.depth === 1) {
                 menuTitle = marked.parser(tokens);
               }
-              if(comment.type === 'heading' && comment.depth === 3) {
-                menus.push(_.extend({}, currentMenu));
-                currentMenu.sheets = [];
-                currentMenu.category = marked.parser(tokens);
-              }
 
             });
 
