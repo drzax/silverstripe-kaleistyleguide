@@ -100,14 +100,6 @@ define([
             currentBlock.css += rule.parsedCssText;
 
           }
-          if(rule.type === 3) {
-            console.log(rule);
-            currentBlock.comments.push({
-                  type: 'code',
-                  text: rule.parsedCssText
-                });
-
-          }
 
         });
       $('.sheet-submenu').slideUp(200);
