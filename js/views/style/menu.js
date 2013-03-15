@@ -48,8 +48,9 @@ define([
             _.each(comments, function (comment) {
               var tokens = [comment];
               tokens.links = defLinks;
-              
-              if(comment.type === 'heading' && comment.depth === 1) {
+
+              // Use the first h1 as the menu title
+              if(menuTitle === '' && comment.type === 'heading' && comment.depth === 1) {
                 menuTitle = marked.parser(tokens);
               }
 
