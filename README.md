@@ -6,8 +6,9 @@ This is a fork of the [Kalei style guide](https://github.com/thomasdavis/kaleist
 The Kalei project aims at making sure your style sheets are fully documented. For more information about the Kalei 
 project see the [Kalei GitHub repository](https://github.com/thomasdavis/kaleistyleguide).
 
-This is very alpha as far as SilverStripe integration goes.
-
+This is very alpha as far as SilverStripe integration goes. It's currently designed specifically to work with the 
+[boilerplate theme](https://github.com/lrc/silverstripe-boilerplate-theme), but should ultimately be generic enough
+to work with any theme.
 
 ## Author
 
