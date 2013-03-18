@@ -18,5 +18,8 @@
             "name": "Left, Right & Centre",
 			"email": "hello@leftrightandcentre.com.au"
         }
-    ]
+    ],
+	"require": {
+		"composer/installers": "*"
+	}
 }
